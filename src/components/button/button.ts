@@ -14,6 +14,7 @@ import styles from "./button.scss";
  *
  * @event gh-blur - Emitted when the button loses focus.
  * @event gh-focus - Emitted when the button gains focus.
+ * 
  */
 @customElement("gh-button")
 export default class GhButton extends LitElement {
@@ -93,12 +94,12 @@ export default class GhButton extends LitElement {
     const isLink = this.href ? true : false;
 
     const interior = html`
-      <span part="label" class="button__label">
+      <span class="button__label">
         <slot @slotchange=${this.handleSlotChange}></slot>
       </span>
       ${this.arrow
         ? html`
-            <span part="arrow" class="button__arrow">
+            <span class="button__arrow">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -117,7 +118,6 @@ export default class GhButton extends LitElement {
 
     const button = html`
       <button
-        part="base"
         class=${classMap({
           button: true,
           "button--primary": this.type === "primary",
@@ -143,7 +143,6 @@ export default class GhButton extends LitElement {
 
 const link = html`
       <a
-        part="base"
         class=${classMap({
           button: true,
           "button--primary": this.type === "primary",

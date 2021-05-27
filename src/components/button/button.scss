@@ -144,13 +144,21 @@
   }
 
   gh-spinner {
-    // --indicator-color: currentColor;
     position: absolute;
+    --size: 1em;
+    --indicator-color: var(--gh-color-complementary-dark);
     height: 1em;
     width: 1em;
     top: calc(50% - 0.5em);
     left: calc(50% - 0.5em);
   }
+
+  &:hover:not(.button--primary)  {
+    gh-spinner {
+      --indicator-color: var(--gh-color-primary-dark);
+      --track-color: rgba(255, 255, 255, 0.1);
+    }
+  }  
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

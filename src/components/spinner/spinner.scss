@@ -1,0 +1,28 @@
+@use '../../styles/component';
+
+:host {
+  --track-color: rgba(0, 0, 0, 0.1);
+  --indicator-color: var(--gh-color-complimentary-dark);
+  --stroke-width: 2px;
+  --size: 1em;
+
+  display: inline-flex;
+}
+
+.spinner {
+  border: var(--stroke-width) solid var(--track-color);
+  border-radius: 50%;
+  border-left-color: var(--indicator-color);
+  animation: spin 1s ease infinite;
+  min-width: var(--size);
+  min-height: var(--size);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
