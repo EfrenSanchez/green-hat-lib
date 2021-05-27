@@ -7,6 +7,10 @@
   "source": "src/greenhat.ts",
   "type": "module",
   "types": "dist/greenhat.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EfrenSanchez/green-hat-lib.git"
+  },
   "dependencies": {
     "lit": "^2.0.0-rc.2"
   },
