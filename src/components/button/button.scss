@@ -1,0 +1,198 @@
+@use '../../styles/component.scss';
+
+:host {
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  border-style: solid;
+  border-width: var(--gh-input-border-width);
+  font-family: var(--gh-input-font-family);
+  font-weight: var(--gh-font-weight-semibold);
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 0;
+  transition: 
+    var(--gh-transition-fast) background-color, 
+    var(--gh-transition-fast) color,
+    var(--gh-transition-fast) border, 
+    var(--gh-transition-fast) box-shadow;
+  cursor: inherit;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.button--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    // When disabled, prevent mouse events from bubbling up
+    * {
+      pointer-events: none;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Standard buttons
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.button {
+  &.button--primary {
+    background-color: var(--gh-color-primary);
+    border-color: var(--gh-color-gray-900);
+    color: var(--gh-color-complimentary-text);
+
+    &:hover:not(.button--disabled) {
+      background-color: var(--gh-color-primary-dark);
+    }
+
+    &:focus:not(.button--disabled) {
+      box-shadow: 0 0 0 var(--gh-focus-ring-width) var(--gh-focus-ring-color-primary);
+    }
+
+    &:active:not(.button--disabled) {
+      background-color: var(--gh-color-primary-light);
+    }
+  }
+  
+  &.button--secundary {
+    background-color: var(--gh-color-white);
+    border-color: var(--gh-color-gray-900);
+    color: var(--gh-color-complimentary-text);
+
+    &:hover:not(.button--disabled) {
+      background-color: var(--gh-color-complimentary-dark);
+      border-color: var(--gh-color-white);
+      color: var(--gh-color-primary-text);
+    }
+
+    &:focus:not(.button--disabled) {
+      box-shadow: 0 0 0 var(--gh-focus-ring-width) var(--gh-focus-ring-color-complimentary);
+    }
+
+    &:active:not(.button--disabled) {
+      background-color: var(--gh-color-complimentary-light);
+      border-color: var(--gh-color-white);
+      color: var(--gh-color-primary-text);
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Sizes
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.button--small {
+  font-size: var(--gh-button-font-size-small);
+  height: var(--gh-input-height-small);
+  line-height: calc(var(--gh-input-height-small) - var(--gh-input-border-width) * 2);
+  border-radius: var(--gh-input-border-radius-small);
+}
+
+.button--medium {
+  font-size: var(--gh-button-font-size-medium);
+  height: var(--gh-input-height-medium);
+  line-height: calc(var(--gh-input-height-medium) - var(--gh-input-border-width) * 2);
+  border-radius: var(--gh-input-border-radius-medium);
+}
+
+.button--large {
+  font-size: var(--gh-button-font-size-large);
+  height: var(--gh-input-height-large);
+  line-height: calc(var(--gh-input-height-large) - var(--gh-input-border-width) * 2);
+  border-radius: var(--gh-input-border-radius-large);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Arrow
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.button--arrow {
+
+  .button__arrow {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Loading 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.button--loading {
+  position: relative;
+  cursor: wait;
+
+  .button__label,
+  .button__arrow {
+    visibility: hidden;
+  }
+
+  gh-spinner {
+    // --indicator-color: currentColor;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    top: calc(50% - 0.5em);
+    left: calc(50% - 0.5em);
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Button spacing
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.button--has-label {
+  &.button--small .button__label {
+    padding: 0 var(--gh-spacing-small);
+  }
+
+  &.button--medium .button__label {
+    padding: 0 var(--gh-spacing-medium);
+  }
+
+  &.button--large .button__label {
+    padding: 0 var(--gh-spacing-large);
+  }
+}
+
+.button--arrow {
+  &.button--small {
+    padding-right: var(--gh-spacing-x-small);
+
+    .button__label {
+      padding-right: var(--gh-spacing-x-small);
+    }
+  }
+
+  &.button--medium {
+    padding-right: var(--gh-spacing-small);
+
+    .button__label {
+      padding-right: var(--gh-spacing-small);
+    }
+  }
+
+  &.button--large {
+    padding-right: var(--gh-spacing-small);
+
+    .button__label {
+      padding-right: var(--gh-spacing-small);
+    }
+  }
+}
