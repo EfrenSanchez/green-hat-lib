@@ -1,0 +1,176 @@
+:root {
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Theme color tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  --gh-color-primary: #ffd205;
+  --gh-color-primary-light: #f3e650;
+  --gh-color-primary-dark: #e5bc04;
+
+  --gh-color-complimentary: #7c0440;
+  --gh-color-complimentary-light: #a30855;
+  --gh-color-complimentary-dark: #5b0841;
+
+  --gh-color-status-error: #fe5f55;
+  --gh-color-status-success: #6fc079;
+  --gh-color-status-info: #1eacd9;
+  --gh-color-status-warning: #f0cf65;
+
+  --gh-color-black: #000;
+  --gh-color-white: #fff;
+
+  --gh-color-gray-50: #fbfbf9;
+  --gh-color-gray-100: #e6e6de;
+  --gh-color-gray-200: #d4d4c4;
+  --gh-color-gray-300: #bebeb0;
+  --gh-color-gray-400: #a5a599;
+  --gh-color-gray-500: #9c9c8a;
+  --gh-color-gray-600: #7e7e73;
+  --gh-color-gray-700: #5e5e56;
+  --gh-color-gray-800: #494944;
+  --gh-color-gray-900: #20201e;
+
+  --gh-color-primary-text: var(--gh-color-white);
+  --gh-color-complimentary-text: var(--gh-color-gray-900);
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Border radius tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  --gh-border-radius-small: 0.125rem; // 2px
+  --gh-border-radius-medium: 0.25rem; // 4px
+  --gh-border-radius-large: 0.5rem; // 8px
+  --gh-border-radius-x-large: 1rem; // 16px
+
+  --gh-border-radius-circle: 50%;
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Elevation tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // --gh-shadow-x-small: 0 1px 0 #0124060d;
+  // --gh-shadow-small: 0 1px 2px #0124061a;
+  // --gh-shadow-medium: 0 2px 4px #0124061a;
+  // --gh-shadow-large: 0 2px 8px #0124061a;
+  // --gh-shadow-x-large: 0 4px 16px #0124061a;
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Spacing tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  --gh-spacing-xxx-small: 0.125rem; // 2px
+  --gh-spacing-xx-small: 0.25rem; // 4px
+  --gh-spacing-x-small: 0.5rem; // 8px
+  --gh-spacing-small: 0.75rem; // 12px
+  --gh-spacing-medium: 1rem; // 16px
+  --gh-spacing-large: 1.25rem; // 20px
+  --gh-spacing-x-large: 1.75rem; // 28px
+  --gh-spacing-xx-large: 2.25rem; // 36px
+  --gh-spacing-xxx-large: 3rem; // 48px
+  --gh-spacing-xxxx-large: 4.5rem; // 72px
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Transition tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  --gh-transition-x-ghow: 1000ms;
+  --gh-transition-ghow: 500ms;
+  --gh-transition-medium: 250ms;
+  --gh-transition-fast: 150ms;
+  --gh-transition-x-fast: 50ms;
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Typography tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // Fonts
+  --gh-font-sans: FF Daxline Pro, Geneva, Trebuchet MS, Tahoma, Verdana, sans-serif;
+
+  // Font sizes
+  --gh-font-size-xx-small: 0.625rem; // 10px
+  --gh-font-size-x-small: 0.75rem; // 12px
+  --gh-font-size-small: 0.875rem; // 14px
+  --gh-font-size-medium: 1rem; // 16px
+  --gh-font-size-large: 1.25rem; // 20px
+  --gh-font-size-x-large: 1.5rem; // 24px
+  --gh-font-size-xx-large: 2.25rem; // 36px
+  --gh-font-size-xxx-large: 3rem; // 48px
+  --gh-font-size-xxxx-large: 4.5rem; // 72px
+
+  // Font weights
+  --gh-font-weight-light: 300;
+  --gh-font-weight-normal: 400;
+  --gh-font-weight-semibold: 500;
+  --gh-font-weight-bold: 700;
+
+  // Letter spacings
+  --gh-letter-spacing-dense: -0.015em;
+  --gh-letter-spacing-normal: normal;
+  --gh-letter-spacing-loose: 0.075em;
+
+  // Line heights
+  --gh-line-height-dense: 1.4;
+  --gh-line-height-normal: 1.8;
+  --gh-line-height-loose: 2.2;
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // Input tokens
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+   // Inputs
+   --gh-input-height-small: 1.875rem; // 30px
+   --gh-input-height-medium: 2.5rem; // 40px
+   --gh-input-height-large: 3.125rem; // 50px
+ 
+  //  --gh-input-background-color: var(--gh-color-white);
+  //  --gh-input-background-color-hover: var(--gh-color-white);
+  //  --gh-input-background-color-focus: var(--gh-color-white);
+  //  --gh-input-background-color-disabled: var(--gh-color-gray-100);
+ 
+  //  --gh-input-border-color: var(--gh-color-gray-300);
+  //  --gh-input-border-color-hover: var(--gh-color-gray-400);
+  //  --gh-input-border-color-focus: var(--gh-color-primary);
+  //  --gh-input-border-color-disabled: var(--gh-color-gray-300);
+   --gh-input-border-width: 1px;
+ 
+   --gh-input-border-radius-small: var(--gh-border-radius-medium);
+   --gh-input-border-radius-medium: var(--gh-border-radius-medium);
+   --gh-input-border-radius-large: var(--gh-border-radius-medium);
+ 
+   --gh-input-font-family: var(--gh-font-sans);
+   --gh-input-font-weight: var(--gh-font-weight-normal);
+   --gh-input-font-size-small: var(--gh-font-size-small);
+   --gh-input-font-size-medium: var(--gh-font-size-medium);
+   --gh-input-font-size-large: var(--gh-font-size-large);
+   --gh-input-letter-spacing: var(--gh-letter-spacing-normal);
+ 
+  //  --gh-input-color: var(--gh-color-gray-700);
+  //  --gh-input-color-hover: var(--gh-color-gray-700);
+  //  --gh-input-color-focus: var(--gh-color-gray-700);
+  //  --gh-input-color-disabled: var(--gh-color-gray-900);
+ 
+  //  --gh-input-icon-color: var(--gh-color-gray-400);
+  //  --gh-input-icon-color-hover: var(--gh-color-gray-600);
+  //  --gh-input-icon-color-focus: var(--gh-color-gray-600);
+ 
+  //  --gh-input-placeholder-color: var(--gh-color-gray-400);
+  //  --gh-input-placeholder-color-disabled: var(--gh-color-gray-600);
+ 
+   --gh-input-spacing-small: var(--gh-spacing-small);
+   --gh-input-spacing-medium: var(--gh-spacing-medium);
+   --gh-input-spacing-large: var(--gh-spacing-large);
+
+  // Focus ring
+  --gh-focus-ring-color-info: #1eacd954;
+  --gh-focus-ring-color-success: #6fc07954;
+  --gh-focus-ring-color-error: #fe5f5554;
+  --gh-focus-ring-color-warning: #f0cf6554;
+  --gh-focus-ring-color-primary: #ffd20554;
+  --gh-focus-ring-color-complimentary: #7c044054;
+
+  --gh-focus-ring-width: 3px;
+
+  // Buttons
+  --gh-button-font-size-small: var(--gh-font-size-x-small);
+  --gh-button-font-size-medium: var(--gh-font-size-small);
+  --gh-button-font-size-large: var(--gh-font-size-medium);
+}
