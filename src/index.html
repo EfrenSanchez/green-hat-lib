@@ -8,9 +8,97 @@
   <link rel="stylesheet" href="./styles/base.scss">
 </head>
 <body>
-  <gh-button href="/" arrow type="secundary" size="medium" loading>
-    Lowercase
-  </gh-button>
+  <style>
+    .component {
+      padding: 1.5rem;
+    }
+
+    .component__title {
+      color: #7c0440;
+    }
+
+    .block,
+    .block__content {
+      margin: .5rem 0 1.5rem;
+    }
+
+    .block__title {
+      border-bottom: 1px solid #2e2e2e2a;
+    }
+    
+    .footer {
+      padding: 2rem;
+      text-align: end;
+      background-color: #2e2e2e2a;
+    }
+
+    .footer__link {
+      color: rgb(15, 15, 15);
+    }
+  </style>
+
+  <h1>Green Hat Library</h1>
+  <section class="component">
+    <h2 component__title">🥊 Button</h2>
+    <div class="block">
+      <h4 class="block__title">Types</h4>
+      <div class="block__content">
+        <gh-button type="primary" size="medium">Primary Button</gh-button>
+        <gh-button type="secundary" size="medium">Secundary Button</gh-button>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4 class="block__title">Sizes</h4>
+      <div class="block__content">
+        <gh-button type="primary" size="small">Small Button</gh-button>
+        <gh-button type="primary" size="medium">Medium Button</gh-button>
+        <gh-button type="primary" size="large">Large Button</gh-button>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4 class="block__title">Others</h4>
+      <caption>Loading button</caption>
+      <div class="block__content">
+        <gh-button type="secundary" size="medium" loading>Loading Button</gh-button>
+      </div>
+
+      <caption>Arrow button</caption>
+      <div class="block__content">
+        <gh-button type="secundary" size="medium" arrow>Arrow Button</gh-button>
+      </div>
+
+      <caption>Disabled button</caption>
+      <div class="block__content">
+        <gh-button type="secundary" size="medium" disabled>Disabled Button</gh-button>
+        <gh-button type="primary" size="medium" disabled>Disabled Button</gh-button>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="component">
+    <h2 class="component__title">🏋️‍♀️ Dropdown</h2>
+
+    <div class="block">
+      <h4 class="block__title">5 Options</h4>
+      <div class="block__content">
+        <gh-dropdown options='["Hello", "World", "Foo", "Bar", "Five"]'></gh-dropdown>
+      </div>
+    </div> 
+
+    <div class="block">
+      <h4 class="block__title">Loading Dropdown</h4>
+      <div class="block__content">
+        <gh-dropdown loading options='["Hello", "World", "Foo", "Bar", "Five"]'></gh-dropdown>
+      </div>
+    </div> 
+  </section>
+
+  <footer class="footer">
+    <a class="footer__link" href="https://github.com/EfrenSanchez/green-hat-lib.git" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+  </footer>
   <script src="./greenhat.ts"></script>  
 </body>
 </html>

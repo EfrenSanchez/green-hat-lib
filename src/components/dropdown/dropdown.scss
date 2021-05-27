@@ -1,0 +1,55 @@
+@use "../../styles/component.scss";
+
+:host {
+  display: block;
+}
+
+.dropdown__panel {
+  position: relative;
+  border-width: var(--gh-input-border-width);
+  border-style: solid;
+  border-color: var(--gh-color-gray-100);
+}
+
+.dropdown__list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: var(--gh-spacing-x-small);
+  background-color: var(--gh-color-gray-100);
+  box-shadow: 0 1px 2px #0124061a;
+  z-index: 3;
+  min-width: 95px;
+  border-radius: var(--gh-input-border-radius-medium);
+}
+
+.dropdown__item {
+  color: var(--gh-color-complimentary-text);
+  cursor: pointer;
+  padding: var(--gh-spacing-x-small);
+  text-align: center;
+  font-family: var(--gh-input-font-family);
+  font-size: var(--gh-input-font-size-small);
+  font-weight: var(--gh-input-font-weight);
+  line-height: var(--gh-input-height-small);
+  letter-spacing: var(--gh-input-letter-spacing);
+  border-bottom: 1px solid var(--gh-color-gray-300);
+  transition: 
+    var(--gh-transition-fast) background-color, 
+    var(--gh-transition-fast) color;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &[selected]::before {
+    content: '✓';
+  }
+
+  &:hover {
+    background-color: var(--gh-color-gray-300);
+  }
+}

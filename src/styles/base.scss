@@ -47,11 +47,11 @@
   // Elevation tokens
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  // --gh-shadow-x-small: 0 1px 0 #0124060d;
-  // --gh-shadow-small: 0 1px 2px #0124061a;
-  // --gh-shadow-medium: 0 2px 4px #0124061a;
-  // --gh-shadow-large: 0 2px 8px #0124061a;
-  // --gh-shadow-x-large: 0 4px 16px #0124061a;
+  --gh-shadow-x-small: 0 1px 0 #0124060d;
+  --gh-shadow-small: 0 1px 2px #0124061a;
+  --gh-shadow-medium: 0 2px 4px #0124061a;
+  --gh-shadow-large: 0 2px 8px #0124061a;
+  --gh-shadow-x-large: 0 4px 16px #0124061a;
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Spacing tokens
@@ -121,15 +121,6 @@
    --gh-input-height-medium: 2.5rem; // 40px
    --gh-input-height-large: 3.125rem; // 50px
  
-  //  --gh-input-background-color: var(--gh-color-white);
-  //  --gh-input-background-color-hover: var(--gh-color-white);
-  //  --gh-input-background-color-focus: var(--gh-color-white);
-  //  --gh-input-background-color-disabled: var(--gh-color-gray-100);
- 
-  //  --gh-input-border-color: var(--gh-color-gray-300);
-  //  --gh-input-border-color-hover: var(--gh-color-gray-400);
-  //  --gh-input-border-color-focus: var(--gh-color-primary);
-  //  --gh-input-border-color-disabled: var(--gh-color-gray-300);
    --gh-input-border-width: 1px;
  
    --gh-input-border-radius-small: var(--gh-border-radius-medium);
@@ -142,18 +133,6 @@
    --gh-input-font-size-medium: var(--gh-font-size-medium);
    --gh-input-font-size-large: var(--gh-font-size-large);
    --gh-input-letter-spacing: var(--gh-letter-spacing-normal);
- 
-  //  --gh-input-color: var(--gh-color-gray-700);
-  //  --gh-input-color-hover: var(--gh-color-gray-700);
-  //  --gh-input-color-focus: var(--gh-color-gray-700);
-  //  --gh-input-color-disabled: var(--gh-color-gray-900);
- 
-  //  --gh-input-icon-color: var(--gh-color-gray-400);
-  //  --gh-input-icon-color-hover: var(--gh-color-gray-600);
-  //  --gh-input-icon-color-focus: var(--gh-color-gray-600);
- 
-  //  --gh-input-placeholder-color: var(--gh-color-gray-400);
-  //  --gh-input-placeholder-color-disabled: var(--gh-color-gray-600);
  
    --gh-input-spacing-small: var(--gh-spacing-small);
    --gh-input-spacing-medium: var(--gh-spacing-medium);
