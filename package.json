@@ -1,6 +1,7 @@
 {
   "name": "green-hat-lib",
   "version": "1.0.0",
+  "private": true,
   "description": "A library of web components.",
   "main": "dist/greenhat.js",
   "module": "dist/greenhat.js",

@@ -19,5 +19,4 @@ And use in the DOM like this:
 - Clone
 - `npm i`
 - `npm run build` to get the build
-- `npm run test` to test
-- `npm run serve` to run a development environment
+- `npm run start` to run a development environment
