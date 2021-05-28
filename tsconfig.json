@@ -12,9 +12,7 @@
       "downlevelIteration": true,
       "target": "es2015"
   },
-  "include": [
-      "./src/**/*"
-  ],
+  "include": ["./src/**/*", "src/utilities/.ts"  ],
   "exclude": [
     "./node_modules/",
     "./dist/"

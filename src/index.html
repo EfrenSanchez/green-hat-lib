@@ -82,9 +82,9 @@
     <h2 class="component__title">🏋️‍♀️ Dropdown</h2>
 
     <div class="block">
-      <h4 class="block__title">5 Options</h4>
+      <h4 class="block__title">4 Options</h4>
       <div class="block__content">
-        <gh-dropdown options='["Hello", "World", "Foo", "Bar", "Five"]'></gh-dropdown>
+        <gh-dropdown options='["Hello", "World", "Foo", "Bar"]'></gh-dropdown>
       </div>
     </div> 
 
@@ -103,9 +103,37 @@
     </div> 
   </section>
 
+  <section class="component">
+    <h2 class="component__title">🏓 Table</h2>
+
+    <div class="block">
+      <h4 class="block__title">Full</h4>
+      <div class="block__content">
+        <gh-datatable id="full-table">
+        </gh-datatable>
+      </div>
+    </div> 
+  </section>
+
   <footer class="footer">
     <a class="footer__link" href="https://github.com/EfrenSanchez/green-hat-lib.git" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
   </footer>
   <script src="./greenhat.ts"></script>  
+  <script>
+    const table = document.querySelector('gh-datatable#full-table');
+    
+    table.conf = [
+      { property: 'tier', header: 'Tier' },
+      { property: 'match', header: 'Match' },
+      { property: 'winners', header: 'Winners' },
+      { property: 'amount', header: 'Amount' }
+    ];
+    table.data= [
+      { tier: 1, match: '5 Numbers + 2 Euronumbersreen', winners: '0x', amount: '£66,993,966.00' },
+      { tier: 2, match: '5 Numbers + 1 Euronumber', winners: '6x', amount: '£438,673.57' },
+      { tier: 3, match: '5 Numbers + 0 Euronumbers', winners: '8x', amount: '£116,119.44' },
+      { tier: 4, match: '4 Numbers + 2 Euronumbers', winners: '104x', amount: '£2,977.37' }
+    ]
+  </script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+@use '../../styles/component.scss';
+
+:host {
+  display: block;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__header {
+  display: table-header-group;
+}
+
+.table__row {
+  border: 1px solid var(--gh-color-gray-200);
+}
+
+.table__cell {
+  position: relative;
+  font-family: var(--gh-input-font-family);
+  text-align: center;
+  padding: var(--gh-input-spacing-small);
+  
+  &.table__cell--header {
+    font-weight: var(--gh-font-weight-bold);
+    font-size: var(--gh-input-font-size-medium);
+  }
+
+  &.table__cell--data {
+    font-weight: var(--gh-font-weight-light);
+    font-size: var(--gh-input-font-size-small);
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Collapsed
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.table--collapsed {
+  .table__header { 
+    display: none; 
+  }
+  
+  .table__row:nth-child(odd) {
+    background-color: var(--gh-color-gray-100);
+  }
+
+  .table__cell--data {
+    display: block;
+    text-align: left;
+    padding: 
+      var(--gh-input-spacing-small)
+      var(--gh-input-spacing-small)
+      var(--gh-input-spacing-small)
+      40%;
+
+    &:before {
+      content: attr(title);
+      position: absolute;
+      white-space: nowrap;
+      left: 0;
+      padding-left: var(--gh-spacing-x-small);
+      text-transform: capitalize;
+      font-weight: var(--gh-font-weight-bold);
+    }
+
+  }
+}

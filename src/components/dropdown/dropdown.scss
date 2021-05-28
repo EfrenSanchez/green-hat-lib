@@ -2,6 +2,11 @@
 
 :host {
   display: block;
+  --trigger-min-width: 100px;
+}
+
+.dropdown__trigger {
+  min-width: var(--trigger-min-width);
 }
 
 .dropdown__panel {

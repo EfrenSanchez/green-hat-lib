@@ -14,6 +14,8 @@ import styles from "./dropdown.scss";
  * @event gh-show - Emitted when the dropdown's list is show.
  * @event gh-hide - Emitted when the dropdown's list is hide.
  * 
+ * @customProperty --trigger-min-width - The min width of the trigger.
+ * 
  */
 @customElement("gh-dropdown")
 export default class GhDropdown extends LitElement {
