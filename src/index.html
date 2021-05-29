@@ -1,139 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Hat Library</title>
-  <link rel="stylesheet" href="./styles/base.scss">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Hat Library</title>
+    <link rel="stylesheet" href="./styles/base.scss">
 </head>
+
 <body>
-  <style>
-    .component {
-      padding: 1.5rem;
-    }
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        
+        .header {
+            height: 250px;
+            position: relative;
+            border: 1.5em;
+            margin: 0 1.5rem;
+            text-align: center;
+        }
+        
+        .header__image {
+            height: 100%;
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2653&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .header__text {
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 70%;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .component {
+            padding: 1.5rem;
+            margin: 2rem;
+            background-color: #fbfbf9;
+            box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+        }
+        
+        .component__title {
+            color: #7c0440;
+        }
+        
+        .block,
+        .block__content {
+            margin: .5rem 0 1.5rem;
+        }
+        
+        .block__title {
+            border-bottom: 1px solid #2e2e2e2a;
+        }
+        
+        .footer {
+            padding: 2rem;
+            text-align: end;
+            background-color: #2e2e2e2a;
+        }
+        
+        .footer__link {
+            color: rgb(15, 15, 15);
+        }
+    </style>
 
-    .component__title {
-      color: #7c0440;
-    }
+    <header class="header">
+        <div class="header__image"></div>
+        <div class="header__text">
+            <h1 class="header__title">Green Hat Library</h1>
+            <p class="header__description">A library of web components.</p>
+        </div>
+    </header>
 
-    .block,
-    .block__content {
-      margin: .5rem 0 1.5rem;
-    }
+    <section class="component">
+        <h2 class="component__title">🥊 Button</h2>
+        <div class="block">
+            <h4 class="block__title">Types</h4>
+            <div class="block__content">
+                <gh-button type="primary" size="medium">Primary Button</gh-button>
+                <gh-button type="secundary" size="medium">Secundary Button</gh-button>
+            </div>
+        </div>
 
-    .block__title {
-      border-bottom: 1px solid #2e2e2e2a;
-    }
-    
-    .footer {
-      padding: 2rem;
-      text-align: end;
-      background-color: #2e2e2e2a;
-    }
+        <div class="block">
+            <h4 class="block__title">Sizes</h4>
+            <div class="block__content">
+                <gh-button type="primary" size="small">Small Button</gh-button>
+                <gh-button type="primary" size="medium">Medium Button</gh-button>
+                <gh-button type="primary" size="large">Large Button</gh-button>
+            </div>
+        </div>
 
-    .footer__link {
-      color: rgb(15, 15, 15);
-    }
-  </style>
+        <div class="block">
+            <h4 class="block__title">Others</h4>
+            <caption>Loading button</caption>
+            <div class="block__content">
+                <gh-button type="secundary" size="medium" loading>Loading Button</gh-button>
+            </div>
 
-  <h1>Green Hat Library</h1>
-  <section class="component">
-    <h2 component__title">🥊 Button</h2>
-    <div class="block">
-      <h4 class="block__title">Types</h4>
-      <div class="block__content">
-        <gh-button type="primary" size="medium">Primary Button</gh-button>
-        <gh-button type="secundary" size="medium">Secundary Button</gh-button>
-      </div>
-    </div>
+            <caption>Arrow button</caption>
+            <div class="block__content">
+                <gh-button type="secundary" size="medium" arrow>Arrow Button</gh-button>
+            </div>
 
-    <div class="block">
-      <h4 class="block__title">Sizes</h4>
-      <div class="block__content">
-        <gh-button type="primary" size="small">Small Button</gh-button>
-        <gh-button type="primary" size="medium">Medium Button</gh-button>
-        <gh-button type="primary" size="large">Large Button</gh-button>
-      </div>
-    </div>
+            <caption>Disabled button</caption>
+            <div class="block__content">
+                <gh-button type="secundary" size="medium" disabled>Disabled Button</gh-button>
+                <gh-button type="primary" size="medium" disabled>Disabled Button</gh-button>
+            </div>
+        </div>
 
-    <div class="block">
-      <h4 class="block__title">Others</h4>
-      <caption>Loading button</caption>
-      <div class="block__content">
-        <gh-button type="secundary" size="medium" loading>Loading Button</gh-button>
-      </div>
+    </section>
 
-      <caption>Arrow button</caption>
-      <div class="block__content">
-        <gh-button type="secundary" size="medium" arrow>Arrow Button</gh-button>
-      </div>
+    <section class="component">
+        <h2 class="component__title">🏋️‍♀️ Dropdown</h2>
 
-      <caption>Disabled button</caption>
-      <div class="block__content">
-        <gh-button type="secundary" size="medium" disabled>Disabled Button</gh-button>
-        <gh-button type="primary" size="medium" disabled>Disabled Button</gh-button>
-      </div>
-    </div>
+        <div class="block">
+            <h4 class="block__title">4 Options</h4>
+            <div class="block__content">
+                <gh-dropdown options='["Hello", "World", "Foo", "Bar"]'></gh-dropdown>
+            </div>
+        </div>
 
-  </section>
+        <div class="block">
+            <h4 class="block__title">Scrollable List</h4>
+            <div class="block__content">
+                <gh-dropdown options='["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]'></gh-dropdown>
+            </div>
+        </div>
 
-  <section class="component">
-    <h2 class="component__title">🏋️‍♀️ Dropdown</h2>
+        <div class="block">
+            <h4 class="block__title">Loading Dropdown</h4>
+            <div class="block__content">
+                <gh-dropdown loading options='["Hello", "World", "Foo", "Bar", "Five"]'></gh-dropdown>
+            </div>
+        </div>
+    </section>
 
-    <div class="block">
-      <h4 class="block__title">4 Options</h4>
-      <div class="block__content">
-        <gh-dropdown options='["Hello", "World", "Foo", "Bar"]'></gh-dropdown>
-      </div>
-    </div> 
+    <section class="component">
+        <h2 class="component__title">🏓 Table</h2>
 
-    <div class="block">
-      <h4 class="block__title">Scrollable List</h4>
-      <div class="block__content">
-        <gh-dropdown options='["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]'></gh-dropdown>
-      </div>
-    </div> 
+        <div class="block">
+            <h4 class="block__title">Full</h4>
+            <div class="block__content">
+                <gh-datatable id="full-table"></gh-datatable>
+            </div>
+        </div>
 
-    <div class="block">
-      <h4 class="block__title">Loading Dropdown</h4>
-      <div class="block__content">
-        <gh-dropdown loading options='["Hello", "World", "Foo", "Bar", "Five"]'></gh-dropdown>
-      </div>
-    </div> 
-  </section>
+        <div class="block">
+            <h4 class="block__title">Collapsed</h4>
+            <div class="block__content" style="max-width: 500px;margin: auto;">
+                <gh-datatable id="collapsed-table"></gh-datatable>
+            </div>
+        </div>
+    </section>
 
-  <section class="component">
-    <h2 class="component__title">🏓 Table</h2>
+    <footer class="footer">
+        <a class="footer__link" href="https://github.com/EfrenSanchez/green-hat-lib.git" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+    </footer>
+    <script src="./greenhat.ts"></script>
+    <script>
+        const fullTable = document.querySelector('gh-datatable#full-table');
+        const collapsedTable = document.querySelector('gh-datatable#collapsed-table');
 
-    <div class="block">
-      <h4 class="block__title">Full</h4>
-      <div class="block__content">
-        <gh-datatable id="full-table">
-        </gh-datatable>
-      </div>
-    </div> 
-  </section>
+        let initialConf = [{
+            property: 'tier',
+            header: 'Tier'
+        }, {
+            property: 'match',
+            header: 'Match'
+        }, {
+            property: 'winners',
+            header: 'Winners'
+        }, {
+            property: 'amount',
+            header: 'Amount'
+        }];
 
-  <footer class="footer">
-    <a class="footer__link" href="https://github.com/EfrenSanchez/green-hat-lib.git" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-  </footer>
-  <script src="./greenhat.ts"></script>  
-  <script>
-    const table = document.querySelector('gh-datatable#full-table');
-    
-    table.conf = [
-      { property: 'tier', header: 'Tier' },
-      { property: 'match', header: 'Match' },
-      { property: 'winners', header: 'Winners' },
-      { property: 'amount', header: 'Amount' }
-    ];
-    table.data= [
-      { tier: 1, match: '5 Numbers + 2 Euronumbersreen', winners: '0x', amount: '£66,993,966.00' },
-      { tier: 2, match: '5 Numbers + 1 Euronumber', winners: '6x', amount: '£438,673.57' },
-      { tier: 3, match: '5 Numbers + 0 Euronumbers', winners: '8x', amount: '£116,119.44' },
-      { tier: 4, match: '4 Numbers + 2 Euronumbers', winners: '104x', amount: '£2,977.37' }
-    ]
-  </script>
+        fullTable.conf = initialConf;
+        collapsedTable.conf = initialConf;
+
+        let initialData = [{
+            tier: 1,
+            match: '5 Numbers + 2 Euronumbersreen',
+            winners: '0x',
+            amount: '£66,993,966.00'
+        }, {
+            tier: 2,
+            match: '5 Numbers + 1 Euronumber',
+            winners: '6x',
+            amount: '£438,673.57'
+        }, {
+            tier: 3,
+            match: '5 Numbers + 0 Euronumbers',
+            winners: '8x',
+            amount: '£116,119.44'
+        }, {
+            tier: 4,
+            match: '4 Numbers + 2 Euronumbers',
+            winners: '104x',
+            amount: '£2,977.37'
+        }];
+
+        fullTable.data = initialData;
+        collapsedTable.data = initialData;
+    </script>
 </body>
+
 </html>

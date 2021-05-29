@@ -1,33 +1,33 @@
 {
-  "name": "green-hat-lib",
-  "version": "1.0.0",
-  "private": true,
-  "description": "A library of web components.",
-  "main": "dist/greenhat.js",
-  "module": "dist/greenhat.js",
-  "source": "src/greenhat.ts",
-  "type": "module",
-  "types": "dist/greenhat.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EfrenSanchez/green-hat-lib.git"
-  },
-  "dependencies": {
-    "lit": "^2.0.0-rc.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@researchgate/babel-plugin-transform-scss-import-to-string": "^1.0.0",
-    "node-sass": "^6.0.0",
-    "parcel-bundler": "^1.12.5",
-    "resize-observer-polyfill": "^1.5.1",
-    "typescript": "^4.3.2"
-  },
-  "scripts": {
-    "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html",
-    "prepublishOnly": "npm run build"
-  },
-  "author": "Efren Sanchez <efren.sanchezgon@gmail.com>",
-  "license": "MIT"
+    "name": "green-hat-lib",
+    "version": "0.4.0",
+    "private": true,
+    "description": "A library of web components.",
+    "main": "dist/greenhat.js",
+    "module": "dist/greenhat.js",
+    "source": "src/greenhat.ts",
+    "type": "module",
+    "types": "dist/greenhat.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EfrenSanchez/green-hat-lib.git"
+    },
+    "dependencies": {
+        "lit": "^2.0.0-rc.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@researchgate/babel-plugin-transform-scss-import-to-string": "^1.0.0",
+        "node-sass": "^6.0.0",
+        "parcel-bundler": "^1.12.5",
+        "resize-observer-polyfill": "^1.5.1",
+        "typescript": "^4.3.2"
+    },
+    "scripts": {
+        "start": "parcel ./src/index.html",
+        "build": "parcel build ./src/index.html",
+        "prepublishOnly": "npm run build"
+    },
+    "author": "Efren Sanchez <efren.sanchezgon@gmail.com>",
+    "license": "MIT"
 }
