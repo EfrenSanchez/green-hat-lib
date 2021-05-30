@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators";
 import { classMap } from "lit-html/directives/class-map";
 import { ifDefined } from "lit-html/directives/if-defined";
 import { emitEvent } from "../../internal/events";
-
+// @ts-ignore
 import styles from "./dropdown.scss";
 
 /**

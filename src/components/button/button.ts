@@ -4,6 +4,7 @@ import { classMap } from "lit-html/directives/class-map";
 import { ifDefined } from "lit-html/directives/if-defined";
 import { emitEvent } from "../../internal/events";
 import { hasSlot } from "../../internal/slot";
+// @ts-ignore
 import styles from "./button.scss";
 
 /**

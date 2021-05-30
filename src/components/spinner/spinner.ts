@@ -1,5 +1,6 @@
 import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement } from 'lit/decorators';
+// @ts-ignore
 import styles from './spinner.scss';
 
 /**

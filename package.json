@@ -1,12 +1,11 @@
 {
     "name": "green-hat-lib",
-    "version": "0.4.0",
-    "private": true,
+    "version": "0.4.4",
     "description": "A library of web components.",
     "main": "dist/greenhat.js",
-    "module": "dist/greenhat.js",
-    "source": "src/greenhat.ts",
-    "type": "module",
+    "files": [
+        "dist"
+    ],
     "types": "dist/greenhat.d.ts",
     "repository": {
         "type": "git",
@@ -20,13 +19,16 @@
         "@researchgate/babel-plugin-transform-scss-import-to-string": "^1.0.0",
         "node-sass": "^6.0.0",
         "parcel-bundler": "^1.12.5",
+        "parcel-plugin-bundle-manifest": "^0.2.0",
         "resize-observer-polyfill": "^1.5.1",
+        "rimraf": "^2.7.1",
         "typescript": "^4.3.2"
     },
     "scripts": {
-        "start": "parcel ./src/index.html",
-        "build": "parcel build ./src/index.html",
-        "prepublishOnly": "npm run build"
+        "start": "parcel demo/index.html",
+        "build": "npm run clean && parcel build ./demo/index.html",
+        "prepublishOnly": "npm run build",
+        "clean": "rimraf dist"
     },
     "author": "Efren Sanchez <efren.sanchezgon@gmail.com>",
     "license": "MIT"

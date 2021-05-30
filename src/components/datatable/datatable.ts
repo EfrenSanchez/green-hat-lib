@@ -3,6 +3,7 @@ import { customElement, property, query, state } from "lit/decorators";
 import { classMap } from "lit-html/directives/class-map";
 import { isObject, isEmptyObject} from "../../utilities/objectHandling";
 import ResizeObserver from 'resize-observer-polyfill';
+// @ts-ignore
 import styles from "./datatable.scss";
 
 export interface Conf {
