@@ -10,9 +10,9 @@ A web components UI library.
 You can require the whole library:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/green-hat-lib@0.4.4/dist/base.b2bb851a.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/green-hat-lib@0.4.5/dist/base.b2bb851a.min.css"/>
 
-<script src="https://cdn.jsdelivr.net/npm/green-hat-lib@0.4.4/dist/greenhat.d52d4386.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/green-hat-lib@0.4.5/dist/greenhat.de370dfe.min.js"></script>
 ```
 
 And use in the DOM like this:
