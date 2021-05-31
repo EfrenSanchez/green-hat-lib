@@ -113,7 +113,7 @@ export default class GhDatatable extends LitElement {
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    resizeObserver.observe(this.table);
+    resizeObserver.unobserve(this.table);
   }
 }
 
